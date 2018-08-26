@@ -175,10 +175,10 @@ header {
 .logo {
   display: block;
   text-indent: -9999px;
-  width: 220px;
-  height: 95px;
+  width: 184px;
+  height: 80px;
   background: url(../img/opensourcecoin-logo-wide.svg);
-  background-size: 220px 95px;
+  background-size: 184px 80px;
   background-repeat: no-repeat;
 }
 
