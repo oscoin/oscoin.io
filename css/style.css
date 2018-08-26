@@ -1,125 +1,141 @@
-* { margin: 0; padding: 0; }
+@font-face {
+  font-family: RelativeFont;
+  src: url("../fonts/relative-book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: RelativeFont;
+  font-style: italic;
+  src: url("../fonts/relative-book-italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: RelativeFont;
+  font-weight: bold;
+  src: url("../fonts/Relative-Bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-	padding: 150px 40px;
-	line-height: 1.4em;
-	font-size: 16px;
+  padding: 40px;
+  line-height: 1.5em;
+  font-size: 20px;
+  color: #28333d;
 }
-body.jobs main, body.update main, body.jobs-web main {
-	margin-top: 70px;
+body.jobs main,
+body.update main,
+body.jobs-web main {
+  margin-top: 70px;
 }
-body, input, button {
-	font-family: Inconsolata, Consolas,
-				 "Liberation Mono", "Menlo",
-				 "Fira Mono", "Ubuntu Mono",
-				 Monaco, courier, monospace;
+body,
+input,
+button {
+  font-family: RelativeFont, Consolas, "Liberation Mono", "Menlo", "Fira Mono",
+    "Ubuntu Mono", Monaco, courier, monospace;
 }
 
-body.team {
-	margin: 0 auto;
-	text-align: center;
-}
-body.team main {
-	margin-top: 60px;
-}
-body.team ul {
-	display: block;
-	margin-bottom: 60px;
-}
-body.team li {
-	display: block;
-	text-align: center;
-}
 body.team li::before {
-	content: none;
+  content: none;
 }
 
-body.page main {
-	margin-top: 45px;
+body.page main,
+body.team main {
+  margin-top: 96px;
 }
 body.page h1 {
-	text-decoration: none !important;
-	line-height: 1.2em;
+  text-decoration: none !important;
+  line-height: 1.2em;
+  font-weight: bold;
 }
 
 main {
-	margin: 0 auto;
-	max-width: 640px;
+  margin: 180px auto;
+  max-width: 720px;
 }
 
-h1, h2, h3, h4, h5 h6 {
-	font-weight: normal;
-	text-decoration: underline;
-	margin-bottom: 1em;
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+  font-weight: normal;
+  text-decoration: underline;
+  margin-bottom: 1em;
 }
 
 .title {
-	display: block;
-	text-align: center;
-	font-size: 2.2em;
-	font-family: courier, monospace;
-	letter-spacing: 0.95em;
-	padding-left: 0px;
-	padding-bottom: 20px;
+  display: block;
+  font-weight: bold;
+  font-size: 2.2em;
+  font-family: RelativeFont, monospace;
+  padding-bottom: 20px;
+  max-width: 720px;
+  margin: 96px auto;
 }
 
 body.update .title {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 a[rel="footnote"] {
-	margin-left: 0.2em;
+  margin-left: 0.2em;
 }
 a[rel="footnote"]::before {
-	content: "[";
+  content: "[";
 }
 a[rel="footnote"]::after {
-	content: "]";
+  content: "]";
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: #6e41e0;
 }
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
-a, a:visited {
-	color: #0000ff;
+a:visited {
+  color: #6e41e0;
 }
 
 sup {
-	vertical-align: baseline;
-	position: relative;
-	top: -0.4em;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
 }
 
 .footnotes {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .footnotes ol {
-	padding-top: 10px;
+  padding-top: 10px;
 }
-.footnotes, footer {
-	font-size: 0.9em;
+.footnotes,
+footer {
+  font-size: 0.9em;
 }
 
 main > p {
-	margin: 1em 0;
-	word-break: keep-all;
+  margin: 1em 0;
+  word-break: keep-all;
 }
 
 address {
-	font-style: normal;
-	color: #888;
-	text-align: center;
+  font-style: normal;
+  color: #888;
+  text-align: center;
 }
 
 hr {
-	display: block;
-	border: none;
-	border-top: 1px dashed #ccc;
-	margin: 2em 5%;
-	text-align: center;
+  display: block;
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 2em 5%;
+  text-align: center;
 }
 
 blockquote {
@@ -127,118 +143,151 @@ blockquote {
   padding: 0.5em 45px;
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
-cite, blockquote {
-  color: #666;
+cite,
+blockquote {
+  color: #546474;
 }
 blockquote:before {
-	color: #ccc;
-	content: open-quote;
-	font-size: 2em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
+  color: #90a0af;
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 blockquote p {
   display: inline;
 }
 cite {
-	margin-top: 10px;
-	font-style: italic;
-	display: block;
-	text-align: right;
-	margin-right: 30px;
+  margin-top: 10px;
+  font-style: italic;
+  display: block;
+  text-align: right;
+  margin-right: 30px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 220px;
+  height: 95px;
+  background: url(../img/opensourcecoin-logo-wide.svg);
+  background-size: 220px 95px;
+  background-repeat: no-repeat;
 }
 
 nav {
-	position: absolute;
-	top: 0;
-	right: 10px;
-	text-align: center;
-	padding: 15px;
+  text-align: center;
+  padding: 15px;
 }
 nav ul {
-	display: block;
+  display: block;
 }
 nav li {
-	display: inline-block;
-	margin-right: 30px;
+  display: inline-block;
+  margin-right: 30px;
 }
 nav li:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
-main ul, main ol {
-	display: table;
-	margin-left: 1rem;
-	list-style-position: inside;
+main ul,
+main ol {
+  display: table;
+  margin-left: 1rem;
+  list-style-position: inside;
 }
 main li {
-	display: table-row;
-	counter-increment: table-ol;
+  display: table-row;
+  counter-increment: table-ol;
 }
 main li::before {
-	content: "•";
-	display: table-cell;
-	padding-right: 10px;
-	text-align: right;
+  content: "•";
+  display: table-cell;
+  padding-right: 10px;
+  text-align: right;
 }
 main ol li::before {
-	content: counter(table-ol) ".";
-	padding-right: 5px;
-	word-break: keep-all;
+  content: counter(table-ol) ".";
+  padding-right: 5px;
+  word-break: keep-all;
 }
 
 form {
-	text-align: center;
+  text-align: center;
 }
 input {
-	padding: 3px 5px;
+  padding: 3px 5px;
 }
 button {
-	padding: 3px 10px;
+  padding: 3px 10px;
 }
 input:focus {
-	outline: none;
+  outline: none;
 }
 
 footer {
-	text-align: center;
-	padding-bottom: 360px;
+  text-align: center;
+  padding-bottom: 360px;
 }
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+footer a.twitter {
+  color: #59e2f3;
+}
+footer a.telegram {
+  color: #37f18f;
+}
+footer a.newsletter {
+  color: #e3eb37;
+}
+
 .updates {
-	text-align: center;
+  text-align: center;
 }
 .updates li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 480px) {
-	body {
-		font-size: 15px;
-		padding-top: 90px;
-		padding-left: 20px;
-		padding-right: 20px;
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-		word-break: break-word;
-	}
-	nav {
-		right: 10px;
-		left: 10px;
-		padding-left: 0;
-		padding-right: 0;
-		padding-top: 10px;
-	}
-	nav li {
-		margin-right: 5px;
-	}
-	nav li:last-child {
-		margin-right: 0;
-	}
-	.title {
-		font-size: 7vw;
-	}
-	blockquote {
-	  padding: 0.5em 0;
-	}
+  body {
+    font-size: 15px;
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  nav {
+    right: 10px;
+    left: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+  nav li {
+    margin-right: 5px;
+  }
+  nav li:last-child {
+    margin-right: 0;
+  }
+  .title {
+    font-size: 7vw;
+  }
+  blockquote {
+    padding: 0.5em 0;
+  }
 }
