@@ -193,6 +193,17 @@ nav li {
   display: inline-block;
   margin-right: 30px;
 }
+
+nav li .updates {
+  color: #59e2f3;
+}
+
+nav li .team {
+  color: #37f18f;
+}
+nav li .motivation {
+  color: #e3eb37;
+}
 nav li:last-child {
   margin-right: 0;
 }
