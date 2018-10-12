@@ -10,6 +10,6 @@ publish:
 	env AWS_BUCKET=oscoin.io ./publish $(FILES)
 
 deps:
-	gem install redcarpet aws-sdk-v1
+	bundle install
 
 .PHONY: publish
