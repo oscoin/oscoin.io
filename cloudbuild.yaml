@@ -13,6 +13,15 @@ steps:
     - BRANCH_NAME=$BRANCH_NAME
     args: ["./publish-image.sh", "nginx"]
 
+  - id: "Deploy NGINX image"
+    name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    env:
+    - PROJECT_ID=$PROJECT_ID
+    - COMMIT_SHA=$COMMIT_SHA
+    - BRANCH_NAME=$BRANCH_NAME
+    args: ["./deploy.sh", "nginx"]
+
   - id: "Publish IPFS image"
     waitFor: ["Build site"]
     name: gcr.io/cloud-builders/docker
@@ -22,3 +31,12 @@ steps:
     - COMMIT_SHA=$COMMIT_SHA
     - BRANCH_NAME=$BRANCH_NAME
     args: ["./publish-image.sh", "ipfs"]
+
+  - id: "Deploy IPFS image"
+    name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    env:
+    - PROJECT_ID=$PROJECT_ID
+    - COMMIT_SHA=$COMMIT_SHA
+    - BRANCH_NAME=$BRANCH_NAME
+    args: ["./deploy.sh", "ipfs"]
