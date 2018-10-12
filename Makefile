@@ -1,14 +1,16 @@
-FILES := *.html updates/*.html css/* jobs/*.html img/*
+.PHONY: default publish
 
-default:
-	./build
+default: site
 
-.PHONY: default
-
-publish:
-	env AWS_BUCKET=oscoin.io ./publish $(FILES)
+site:
+	bundle exec ./build
 
 deps:
 	bundle install
 
-.PHONY: publish
+clean:
+	rm -rf site
+
+publish: site
+	env AWS_BUCKET=oscoin.io ./publish site
+
