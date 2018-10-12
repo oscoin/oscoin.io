@@ -1,0 +1,24 @@
+steps:
+  - id: "Build site"
+    name: gcr.io/cloud-builders/docker
+    args: ["build", "--target", "site", "."]
+
+  - id: "Publish NGINX image"
+    waitFor: ["Build site"]
+    name: gcr.io/cloud-builders/docker
+    entrypoint: "bash"
+    env:
+    - PROJECT_ID=$PROJECT_ID
+    - COMMIT_SHA=$COMMIT_SHA
+    - BRANCH_NAME=$BRANCH_NAME
+    args: ["./publish-image.sh", "nginx"]
+
+  - id: "Publish IPFS image"
+    waitFor: ["Build site"]
+    name: gcr.io/cloud-builders/docker
+    entrypoint: "bash"
+    env:
+    - PROJECT_ID=$PROJECT_ID
+    - COMMIT_SHA=$COMMIT_SHA
+    - BRANCH_NAME=$BRANCH_NAME
+    args: ["./publish-image.sh", "ipfs"]
