@@ -1,44 +1,26 @@
 @font-face {
-  font-family: "FoundersGroteskMono";
-  src: url("/fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot"),
-	url("/fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
-	url("/fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff");
+	font-family: "Px437";
+	src: url("/fonts/Px437_IBM_VGA8.ttf");
 }
 
 * { margin: 0; padding: 0; }
 
 body {
 	padding: 40px;
-	line-height: 1.5em;
+	line-height: 1.4em;
 	letter-spacing: -0.3px;
 	font-size: 42px;
 	color: #28333d;
+	background-color: #ffffff;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-body.jobs main, body.update main, body.jobs-web main {
-	margin-top: 70px;
-}
 body, input, button, code, .title {
-	font-family: "FoundersGroteskMono", courier, monospace;
+	font-family: "Px437", courier, monospace;
 }
 
-body.updates li::before, body.team li::before {
-	content: none;
-}
-
-body.page main,
-body.team main {
+body.page main {
 	margin-top: 96px;
-}
-body.team main ul,
-body.team main li,
-body.updates main ul,
-body.updates main li {
-	display: block;
-}
-body.team main, body.updates main {
-	text-align: center;
 }
 body.page h1 {
 	text-decoration: none !important;
@@ -150,13 +132,19 @@ hr {
 	text-align: center;
 }
 
+strong {
+	font-weight: normal;
+	color: #ff55ff;
+}
+
 blockquote {
-  margin: 1.5em 0;
-  padding: 0.5em 45px;
-  quotes: "\201C" "\201D" "\2018" "\2019";
+	margin: 1.5em 0;
+	padding: 0.5em 45px;
+	quotes: "\201C" "\201D" "\2018" "\2019";
+	quotes: "\"" "\"" "\"" "\"";
 }
 cite, blockquote {
-  color: #666;
+	color: #666;
 }
 blockquote:before {
 	color: #ccc;
@@ -242,20 +230,6 @@ footer ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	list-style-type: none;
-}
-
-footer a.twitter {
-}
-footer a.telegram {
-}
-footer a.newsletter {
-}
-
-.updates {
-	text-align: center;
-}
-.updates li {
 	list-style-type: none;
 }
 
