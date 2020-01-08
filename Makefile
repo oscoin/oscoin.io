@@ -1,4 +1,4 @@
-FILES := *.pdf *.html updates/*.html css/* img/* fonts/*
+FILES := *.pdf *.html css/* img/* fonts/*
 
 default:
 	./build
