@@ -11,7 +11,7 @@ body {
 	padding: 40px;
 	line-height: 1.5em;
 	letter-spacing: -0.3px;
-	font-size: 18px;
+	font-size: 42px;
 	color: #28333d;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -49,18 +49,12 @@ body.index main ul {
 	margin-left: 1rem;
 }
 
-body.update img[alt=logo] {
-	width: 300px;
-	text-align: center !important;
-}
-
 code {
 	font-style: italic;
 }
 
 main {
-	margin: 180px auto;
-	max-width: 720px;
+	margin: 60px auto;
 }
 
 h1, h2, h3, h4, h5 h6 {
@@ -184,9 +178,6 @@ cite {
 }
 
 header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 }
 
 object {
@@ -194,8 +185,8 @@ object {
 }
 
 nav {
-	text-align: center;
-	padding: 15px;
+	text-align: right;
+	padding: 60px;
 }
 nav ul {
 	display: block;
@@ -203,13 +194,6 @@ nav ul {
 nav li {
 	display: inline-block;
 	margin-right: 30px;
-}
-
-nav li .updates {
-}
-nav li .team {
-}
-nav li .motivation {
 }
 
 nav li:last-child {
@@ -295,7 +279,7 @@ footer a.newsletter {
 
 @media screen and (max-width: 480px) {
 	body {
-		font-size: 15px;
+		font-size: 0.9em;
 		padding-left: 20px;
 		padding-right: 20px;
 		word-wrap: break-word;

@@ -12,10 +12,6 @@ $markdown = Redcarpet::Markdown.new(
 )
 
 INDEX_TEMPLATE = File.read("templates/index.html.erb")
-JOBS_TEMPLATE = File.read("templates/jobs.html.erb")
-UPDATE_TEMPLATE = File.read("templates/update.html.erb")
-TEAM_TEMPLATE = File.read("templates/team.html.erb")
-PAGE_TEMPLATE = File.read("templates/page.html.erb")
 NAV_TEMPLATE = File.read("templates/nav.html.erb")
 
 def page!(template, name, out, src, extra)
@@ -31,14 +27,3 @@ def to_html(template, attrs)
 end
 
 page! INDEX_TEMPLATE, "index", "index", "intro.md", {}
-page! JOBS_TEMPLATE, "jobs", "jobs", "jobs.md", {}
-page! JOBS_TEMPLATE, "jobs-web", "jobs/fae9b81", "jobs-web.md", {}
-page! TEAM_TEMPLATE, "team", "team", "team.md", {}
-page! PAGE_TEMPLATE, "motivation", "motivation", "motivation.md", {}
-page! PAGE_TEMPLATE, "radicle", "radicle", "radicle.md", {}
-page! PAGE_TEMPLATE, "updates", "updates/index", "updates.md", {}
-page! PAGE_TEMPLATE, "faq", "faq", "faq.md", {}
-
-[1, 2, 3, 4].each do |n|
-  page! UPDATE_TEMPLATE, "update", "updates/#{n}", "updates/#{n}.md", { n: n }
-end
